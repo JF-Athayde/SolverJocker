@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Ciência é Top | Insight Urbano
+    </title>
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --azul: #092d68;
+            --azul-claro: #1769a8;
+            --azul-medio: #124a8c;
+
+            --dourado: #e5a91a;
+            --dourado-claro: #f5c94c;
+
+            --verde: #247a52;
+
+            --cinza: #626262;
+            --cinza-claro: #f3f5f7;
+
+            --branco: #ffffff;
+            --preto: #111111;
+
+            --borda: #dce1e7;
+
+            --sombra:
+                0 12px 35px rgba(9, 45, 104, 0.10);
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f5f7fa 0%,
+                    #ffffff 45%,
+                    #f5f7fa 100%
+                );
+
+            color: var(--preto);
+
+            min-height: 100vh;
+        }
+
+
+        /* =====================================================
+           TOPO INSTITUCIONAL
+        ===================================================== */
+
+        .top-line {
+
+            height: 6px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--azul) 0%,
+                    var(--azul) 70%,
+                    var(--dourado) 70%,
+                    var(--dourado) 100%
+                );
+        }
+
+
+        header {
+
+            background: var(--branco);
+
+            border-bottom:
+                3px solid var(--preto);
+
+            padding:
+                14px 6%;
+        }
+
+
+        .header-content {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .institution {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .school-logo {
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--azul),
+                    var(--azul-claro)
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 900;
+
+            font-size: 17px;
+
+            line-height: 1;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 15px
+                rgba(9, 45, 104, 0.2);
+        }
+
+
+        .institution-text strong {
+
+            display: block;
+
+            color: var(--azul);
+
+            font-size: 14px;
+        }
+
+
+        .institution-text span {
+
+            display: block;
+
+            color: var(--cinza);
+
+            font-size: 11px;
+
+            margin-top: 4px;
+        }
+
+
+        .event {
+
+            background: var(--azul);
+
+            color: white;
+
+            padding:
+                11px 28px;
+
+            border-radius: 30px;
+
+            font-weight: 900;
+
+            font-size: 16px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            max-width: 1150px;
+
+            margin:
+                35px auto 20px;
+
+            padding:
+                0 25px;
+
+            text-align: center;
+        }
+
+
+        .edition {
+
+            color: var(--cinza);
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+
+            font-weight: 900;
+
+            color: var(--azul);
+
+            margin-bottom: 12px;
+        }
+
+
+        .hero h1 span {
+
+            color: var(--dourado);
+        }
+
+
+        .hero-description {
+
+            max-width: 780px;
+
+            margin: auto;
+
+            color: #555;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           TEMA DA MOSTRA
+        ===================================================== */
+
+        .theme-box {
+
+            max-width: 1000px;
+
+            margin:
+                28px auto 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--azul),
+                    #104f96
+                );
+
+            color: white;
+
+            padding:
+                25px 35px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow: var(--sombra);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .theme-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border:
+                35px solid
+                rgba(255,255,255,0.06);
+
+            border-radius: 50%;
+
+            right: -60px;
+            top: -90px;
+        }
+
+
+        .theme-label {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+
+            opacity: 0.8;
+
+            margin-bottom: 8px;
+        }
+
+
+        .theme-box h2 {
+
+            font-size:
+                clamp(1.2rem, 3vw, 1.8rem);
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+
+        .theme-box p {
+
+            margin-top: 10px;
+
+            opacity: 0.9;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           CONTEÚDO
+        ===================================================== */
+
+        main {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding:
+                0 25px 60px;
+        }
+
+
+        .section-title {
+
+            color: var(--azul);
+
+            font-size: 26px;
+
+            font-weight: 900;
+
+            margin-bottom: 7px;
+        }
+
+
+        .section-description {
+
+            color: var(--cinza);
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           BOLETIM
+        ===================================================== */
+
+        .bulletin-container {
+
+            background: white;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 22px;
+
+            padding: 35px;
+
+            box-shadow: var(--sombra);
+        }
+
+
+        .bulletin-header {
+
+            border-bottom:
+                2px solid var(--dourado);
+
+            padding-bottom: 22px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .bulletin-tag {
+
+            display: inline-block;
+
+            background:
+                rgba(9, 45, 104, 0.08);
+
+            color: var(--azul);
+
+            padding:
+                7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .bulletin-header h2 {
+
+            font-size: 30px;
+
+            color: var(--azul);
+
+            margin-bottom: 8px;
+        }
+
+
+        .bulletin-header p {
+
+            color: var(--cinza);
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           FORMULÁRIO
+        ===================================================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .form-group.full {
+
+            grid-column: 1 / -1;
+        }
+
+
+        label {
+
+            color: var(--azul);
+
+            font-size: 14px;
+
+            font-weight: 900;
+        }
+
+
+        label span {
+
+            color: var(--cinza);
+
+            font-size: 11px;
+
+            font-weight: normal;
+        }
+
+
+        input,
+        textarea,
+        select {
+
+            width: 100%;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 11px;
+
+            padding:
+                14px 15px;
+
+            font-size: 14px;
+
+            font-family: inherit;
+
+            background: #fcfdff;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+
+        textarea {
+
+            min-height: 140px;
+
+            resize: vertical;
+        }
+
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+
+            border-color:
+                var(--azul);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(9,45,104,0.08);
+        }
+
+
+        /* =====================================================
+           PILARES
+        ===================================================== */
+
+        .pillars-section {
+
+            margin-top: 35px;
+        }
+
+
+        .pillars-title {
+
+            color: var(--azul);
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            margin-bottom: 8px;
+        }
+
+
+        .pillars-description {
+
+            color: var(--cinza);
+
+            font-size: 13px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .pillars {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .pillar {
+
+            position: relative;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 14px;
+
+            padding: 17px;
+
+            cursor: pointer;
+
+            background: white;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s,
+                border 0.2s;
+        }
+
+
+        .pillar:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(0,0,0,0.07);
+        }
+
+
+        .pillar.selected {
+
+            border:
+                2px solid var(--azul);
+
+            background:
+                rgba(9,45,104,0.04);
+        }
+
+
+        .pillar input {
+
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+
+        .pillar-name {
+
+            color: var(--azul);
+
+            font-weight: 900;
+
+            font-size: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .pillar-description {
+
+            color: var(--cinza);
+
+            font-size: 11px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =====================================================
+           BOTÃO
+        ===================================================== */
+
+        .submit-area {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: flex-end;
+        }
+
+
+        .btn-submit {
+
+            border: none;
+
+            border-radius: 12px;
+
+            padding:
+                15px 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--azul),
+                    var(--azul-claro)
+                );
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+
+        .btn-submit:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(9,45,104,0.25);
+        }
+
+
+        /* =====================================================
+           ÁREA DE RESULTADO
+        ===================================================== */
+
+        #result {
+
+            display: none;
+
+            margin-top: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7fafc,
+                    white
+                );
+
+            border:
+                1px solid var(--borda);
+
+            border-left:
+                5px solid var(--dourado);
+
+            border-radius: 15px;
+
+            padding: 25px;
+        }
+
+
+        #result h3 {
+
+            color: var(--azul);
+
+            margin-bottom: 12px;
+        }
+
+
+        #result p {
+
+            color: var(--cinza);
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           CARDS DOS PILARES
+        ===================================================== */
+
+        .pillars-showcase {
+
+            margin-top: 40px;
+        }
+
+
+        .showcase-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(6, 1fr);
+
+            gap: 10px;
+        }
+
+
+        .showcase-card {
+
+            text-align: center;
+
+            padding:
+                18px 10px;
+
+            background: white;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 13px;
+
+            min-height: 100px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            transition: 0.2s;
+        }
+
+
+        .showcase-card:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(0,0,0,0.06);
+        }
+
+
+        .showcase-number {
+
+            font-size: 11px;
+
+            color: var(--dourado);
+
+            font-weight: 900;
+
+            margin-bottom: 7px;
+        }
+
+
+        .showcase-card strong {
+
+            color: var(--azul);
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           EQUIPE
+        ===================================================== */
+
+        .team {
+
+            margin-top: 45px;
+
+            background:
+                var(--azul);
+
+            color: white;
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .team::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 160px;
+            height: 160px;
+
+            border:
+                30px solid
+                rgba(255,255,255,0.05);
+
+            border-radius: 50%;
+
+            left: -70px;
+            bottom: -80px;
+        }
+
+
+        .team h2 {
+
+            font-size: 24px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .team > p {
+
+            opacity: 0.8;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .members {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .member {
+
+            background:
+                rgba(255,255,255,0.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.2);
+
+            padding:
+                11px 18px;
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            border-top:
+                4px solid var(--dourado);
+
+            background:
+                #061d43;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 28px 20px;
+        }
+
+
+        footer strong {
+
+            font-size: 16px;
+        }
+
+
+        footer p {
+
+            margin-top: 7px;
+
+            font-size: 11px;
+
+            opacity: 0.65;
+        }
+
+
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        #loading-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(3,20,45,0.78);
+
+            z-index: 9999;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+
+        .loading-box {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            max-width: 420px;
+
+            width: 100%;
+        }
+
+
+        .loading-box h2 {
+
+            color: var(--azul);
+
+            margin-bottom: 10px;
+        }
+
+
+        .loading-box p {
+
+            color: var(--cinza);
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .spinner {
+
+            width: 48px;
+            height: 48px;
+
+            border:
+                5px solid #e5e9ef;
+
+            border-top-color:
+                var(--dourado);
+
+            border-radius: 50%;
+
+            margin:
+                25px auto 0;
+
+            animation:
+                spin 0.9s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .header-content {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-group.full {
+
+                grid-column: auto;
+            }
+
+
+            .pillars {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .showcase-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .bulletin-container {
+
+                padding: 22px;
+            }
+
+
+            .pillars {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .showcase-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .event {
+
+                font-size: 13px;
+
+                padding:
+                    10px 18px;
+            }
+
+
+            .hero {
+
+                padding:
+                    0 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="top-line"></div>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header>
+
+        <div class="header-content">
+
+
+            <div class="institution">
+
+                <div class="school-logo">
+                    C7S
+                </div>
+
+                <div class="institution-text">
+
+                    <strong>
+                        COLÉGIO 7 DE SETEMBRO
+                    </strong>
+
+                    <span>
+                        Tradição, excelência e inovação
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="event">
+                MOSTRA CULTURAL — 2026
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="edition">
+            42ª Mostra Cultural Professor Antônio Gondim
+        </div>
+
+
+        <h1>
+            <span>Insight</span> Urbano
+        </h1>
+
+
+        <p class="hero-description">
+
+            Uma ferramenta da equipe
+            <strong>Ciência é Top</strong>
+            para transformar acontecimentos cotidianos
+            em análises sobre a vida em sociedade.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         TEMA GERADOR
+    ====================================================== -->
+
+    <section class="theme-box">
+
+        <div class="theme-label">
+            TEMA GERADOR
+        </div>
+
+        <h2>
+            Pilares Setembrinos:
+            A Reinvenção da Vida em Sociedade
+        </h2>
+
+        <p>
+            Do conhecimento do campo das ideias
+            para a prática cotidiana.
+        </p>
+
+    </section>
+
+
+    <main>
+
+
+        <!-- =================================================
+             CRIAÇÃO DO BOLETIM
+        ================================================== -->
+
+        <section class="bulletin-container">
+
+
+            <div class="bulletin-header">
+
+                <span class="bulletin-tag">
+                    Boletim de Análise Urbana
+                </span>
+
+                <h2>
+                    Criar Insight Urbano
+                </h2>
+
+                <p>
+                    Registre uma situação real do cotidiano
+                    e investigue como ela se relaciona com
+                    os princípios que devem orientar a vida
+                    em sociedade.
+                </p>
+
+            </div>
+
+
+            <form
+                id="bulletinForm"
+                method="POST"
+                action="{{ url_for('create_bulletin_urban') }}"
+                onsubmit="return showLoading()"
+            >
+
+
+                <div class="form-grid">
+
+
+                    <!-- CIDADE -->
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            Cidade
+                        </label>
+
+                        <input
+                            id="city"
+                            name="city"
+                            type="text"
+                            placeholder="Ex.: Fortaleza"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- LOCAL -->
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Local da situação
+                        </label>
+
+                        <input
+                            id="location"
+                            name="location"
+                            type="text"
+                            placeholder="Ex.: Praça, escola, bairro..."
+                        >
+
+                    </div>
+
+
+                    <!-- SITUAÇÃO -->
+
+                    <div class="form-group full">
+
+                        <label for="situation">
+
+                            Situação observada
+
+                            <span>
+                                O que aconteceu?
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="situation"
+                            name="situation"
+                            placeholder="Descreva o acontecimento observado..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- PROBLEMA -->
+
+                    <div class="form-group full">
+
+                        <label for="problem">
+
+                            Problema social ou urbano
+
+                            <span>
+                                Qual questão essa situação revela?
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="problem"
+                            name="problem"
+                            placeholder="Ex.: descarte irregular de lixo, conflito entre pessoas, falta de acessibilidade..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- CONSEQUÊNCIAS -->
+
+                    <div class="form-group full">
+
+                        <label for="consequences">
+
+                            Consequências
+
+                            <span>
+                                Quem ou o que é afetado?
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="consequences"
+                            name="consequences"
+                            placeholder="Descreva os impactos observados..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================================
+                     PILARES SETEMBRINOS
+                ========================================== -->
+
+                <div class="pillars-section">
+
+                    <div class="pillars-title">
+                        Pilares envolvidos
+                    </div>
+
+                    <div class="pillars-description">
+
+                        Selecione os princípios que possuem
+                        relação com a situação analisada.
+
+                    </div>
+
+
+                    <div class="pillars">
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Respeito"
+                            >
+
+                            <div class="pillar-name">
+                                Respeito
+                            </div>
+
+                            <div class="pillar-description">
+                                Convivência, empatia,
+                                diálogo e consideração
+                                pelo próximo.
+                            </div>
+
+                        </label>
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Cidadania"
+                            >
+
+                            <div class="pillar-name">
+                                Cidadania
+                            </div>
+
+                            <div class="pillar-description">
+                                Participação social,
+                                colaboração e construção
+                                coletiva.
+                            </div>
+
+                        </label>
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Responsabilidade"
+                            >
+
+                            <div class="pillar-name">
+                                Responsabilidade
+                            </div>
+
+                            <div class="pillar-description">
+                                Consciência sobre as
+                                consequências das nossas
+                                escolhas.
+                            </div>
+
+                        </label>
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Zelo"
+                            >
+
+                            <div class="pillar-name">
+                                Zelo
+                            </div>
+
+                            <div class="pillar-description">
+                                Cuidado com as pessoas,
+                                espaços públicos e
+                                meio ambiente.
+                            </div>
+
+                        </label>
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Senso de Justiça"
+                            >
+
+                            <div class="pillar-name">
+                                Senso de Justiça
+                            </div>
+
+                            <div class="pillar-description">
+                                Equidade, direitos,
+                                inclusão e busca pelo
+                                bem coletivo.
+                            </div>
+
+                        </label>
+
+
+                        <label class="pillar">
+
+                            <input
+                                type="checkbox"
+                                name="pillar"
+                                value="Sinceridade"
+                            >
+
+                            <div class="pillar-name">
+                                Sinceridade
+                            </div>
+
+                            <div class="pillar-description">
+                                Honestidade, transparência,
+                                diálogo e confiança.
+                            </div>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     OBSERVAÇÕES
+                ========================================== -->
+
+                <div
+                    class="form-group"
+                    style="margin-top: 25px;"
+                >
+
+                    <label for="observations">
+
+                        Observações adicionais
+
+                    </label>
+
+                    <textarea
+                        id="observations"
+                        name="observations"
+                        placeholder="Inclua dados, observações, informações coletadas ou outras evidências..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- =========================================
+                     BOTÃO
+                ========================================== -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="btn-submit"
+                    >
+
+                        Gerar Boletim
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            <!-- RESULTADO -->
+
+            <div id="result">
+
+                <h3>
+                    Boletim preparado
+                </h3>
+
+                <p id="resultText"></p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             OS 6 PILARES
+        ================================================== -->
+
+        <section class="pillars-showcase">
+
+            <h2 class="section-title">
+                Os Pilares Setembrinos
+            </h2>
+
+            <p class="section-description">
+
+                O Insight Urbano utiliza os pilares como
+                lentes para interpretar situações reais
+                da vida em sociedade.
+
+            </p>
+
+
+            <div class="showcase-grid">
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        01
+                    </div>
+
+                    <strong>
+                        Respeito
+                    </strong>
+
+                </div>
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        02
+                    </div>
+
+                    <strong>
+                        Cidadania
+                    </strong>
+
+                </div>
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        03
+                    </div>
+
+                    <strong>
+                        Responsabilidade
+                    </strong>
+
+                </div>
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        04
+                    </div>
+
+                    <strong>
+                        Zelo
+                    </strong>
+
+                </div>
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        05
+                    </div>
+
+                    <strong>
+                        Senso de Justiça
+                    </strong>
+
+                </div>
+
+
+                <div class="showcase-card">
+
+                    <div class="showcase-number">
+                        06
+                    </div>
+
+                    <strong>
+                        Sinceridade
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EQUIPE
+        ================================================== -->
+
+        <section class="team">
+
+            <h2>
+                Ciência é Top
+            </h2>
+
+            <p>
+                Equipe responsável pelo projeto
+                apresentado na 42ª Mostra Cultural.
+            </p>
+
+
+            <div class="members">
+
+                <div class="member">
+                    Pedra Celso Varela Tote
+                </div>
+
+                <div class="member">
+                    Cristiano Leão Mendes de Souza
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
+
+    <div id="loading-overlay">
+
+        <div class="loading-box">
+
+            <h2>
+                Preparando seu boletim
+            </h2>
+
+            <p>
+                O Insight Urbano está organizando
+                as informações da situação analisada.
+            </p>
+
+            <div class="spinner"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <strong>
+            CIÊNCIA É TOP
+        </strong>
+
+        <p>
+            42ª Mostra Cultural Professor Antônio Gondim
+            • Colégio 7 de Setembro • 2026
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+        const pillars = document.querySelectorAll(".pillar");
+
+        pillars.forEach(pillar => {
+
+            const checkbox = pillar.querySelector("input");
+
+            checkbox.addEventListener("change", () => {
+
+                if (checkbox.checked) {
+                    pillar.classList.add("selected");
+                } else {
+                    pillar.classList.remove("selected");
+                }
+
+            });
+
+        });
+
+
+        function showLoading() {
+
+            const selectedPillars =
+                document.querySelectorAll(
+                    'input[name="pillar"]:checked'
+                );
+
+            if (selectedPillars.length === 0) {
+
+                alert(
+                    "Selecione pelo menos um Pilar Setembrino."
+                );
+
+                return false;
+            }
+
+            document.getElementById(
+                "loading-overlay"
+            ).style.display = "flex";
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
